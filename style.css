@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=PT+Sans:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: hidden;
+    font-family: 'PT Sans', sans-serif;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+nav{
+    width: 100%;
+    height: 3.8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top:0;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+nav label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    margin-left: 1em;
+}
+nav label p{
+    text-transform: capitalize;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+nav aside{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    margin-right: 2em;
+}
+aside .input{
+    border: 2px solid #000;
+    border-radius: 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+aside .input input{
+    width: 80%;
+    height: 100%;
+    background: transparent;
+    text-align: center;
+    border: none;
+    border-radius: 1em;
+    padding: .3em;
+}
+aside a{
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+aside .input i{
+    font-size: 1em;
+    margin-right: .5em;
+}
+aside .user{
+    position: relative;
+}
+aside .user p{
+    position: absolute;
+    top:-40%;
+    right: -20%;
+    background-color: greenyellow;
+    padding: .1em .3em;
+    border-radius: 50%;
+}
+nav i{
+    font-size: 1.5em;
+    font-weight: 700;
+    cursor: pointer;
+}
+nav ul{
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 3.8em;
+    left:-100%;
+    background: rgba(255, 255, 255, .7);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    flex-direction: column;
+    transition: all 1s ease;
+}
+nav ul li a{
+    font-size: 1.3em;
+    font-weight: 700;
+    padding: .5em 0;
+    color: #000;
+    text-decoration: none;
+    text-transform: capitalize;
+    position: relative;
+    transition: all .5s ease-in-out;
+}
+nav ul li{
+    margin: .5em 0;
+}
+nav ul li a::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: all .5s ease;
+
+}
+nav ul li a:hover::before{
+    right: 0;
+    height: 3px;
+    width: 100%;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: url(./img/img1.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.container .welcome{
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+.welcome .title{
+    transform: translateY(20vh);
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    text-transform: capitalize;
+}
+.welcome .title h1{
+    font-size: 3em;
+}
+.welcome .title p{
+    font-size: 3em;
+    font-weight: 200;
+    font-family: 'Dosis', sans-serif;
+}
+.welcome .box{
+    width: 90%;
+    height: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    transform: translateX(-5%);
+}
+.welcome .box .wrapper{
+    width: 17em;
+    height: 20em;
+    position: relative;
+    overflow: hidden;
+    outline: hidden;
+    transition: all 1s ease;
+}
+.welcome .box .wrapper span{
+    background: green;
+    padding: 1em .5em;
+    border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    left:-50%;
+    font-size: 1.5em;
+    color: #fff;
+    transition: all 1s ease;
+}
+.welcome .box .wrapper:hover{
+    display: block;
+}
+.welcome .box .wrapper:hover span{
+    left: 5%;
+}
